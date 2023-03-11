@@ -204,38 +204,38 @@
 
   Tech lead of team of six engineers. Projects I was personally involved with included:
   \resumeItemListStart{}
-    \resumeItem{Rewrite of our in-house event ingestion service in Flink + Kafka. Our primary goal was scalability—the previous system was very unstable—but we also added a number of features:}
+    \resumeItem{Rewrite of our in-house event ingestion service in Flink + Kafka. Our primary goal was scalability—the earlier  RabbitMQ-based system was very unstable—but we also added a number of features:}
     \resumeItemListStart{}
-    \resumeItem{Fanout to multiple downstreams, including realtime marketing and recommendations, as well as batch loads into Redshift}
-    \resumeItem{Realtime sessionization via a stateful Flink job}
-    \resumeItem{Realtime validation against JSONSchema}
+    \resumeItem{Fanout to multiple downstreams: front page recommendations, push notifications, and hourly batch loads into Redshift}
+    \resumeItem{Realtime sessionization implemented as a stateful Flink job}
+    \resumeItem{Validation against JSONSchema with configurable alerting in Datadog}
     \resumeItemListEnd{}
     I advocated for the project, designed the system, and implemented most of the core validation and transformation jobs. Others on the team deployed Flink and Kafka, and built the sessionization job. 
     \resumeItem{Deployment of Amundsen for an OSS data-discovery and documentation platform. We built an AWS Neptune backend and added a number of extensions to ingest lineage metadata from internal services.}
-    \resumeItem{Deployed a standard Jupyter Notebook infrastructure based on Docker, Papermill, and NBViewer. This let users include notebooks in production workflows, and supported local development in an identical environment to production.}
+    \resumeItem{Standardized Jupyter Notebook infrastructure based on Docker, Papermill, and NBViewer. This let users use notebooks in production workflows, and supported local development in an identical environment to production.}
     \resumeItem{Extensive improvements to the core data stack: \href{https://github.com/seatgeek/druzhba}{\uline{Druzhba}} (in-house DB-to-DB ETL tool, now open-source)}, Kinesis, DBT, Luigi (heavily modified), and Redshift.
   \resumeItemListEnd{}
 
   \resumeQuadHeadingChild{Sr. Data Scientist}{2019-2020}
   \resumeQuadHeadingChild{Data Scientist II}{2018}
 
- I specialized in recommendation signal and user activity data, working in Spark, SQL, and Python.
+ I specialized in recommendation signal and user activity data, working in Spark, SQL, and Python. Projects included:
   \resumeItemListStart{}
-    \resumeItem{Implemented email newsletter recommendations algorithm in Spark. This roughly tripled the sales attributed to the weekly newsletter immediately, to about \$700k/week. I also built algorithms for price drop detection and cart-abandonment notifications.}
-    \resumeItem{Built event and performer popularity models in Keras, to use as inputs to event recommendations and search.}
-    \resumeItem{Implemented customer entity-linking algorithm to deduplicate devices and users in marketing attribution and funnel KPIs.}
+  \resumeItem{Algorithms for the weekly newsletter, cart abandonment and price drops notifications, in Spark + SQL. The newsletter algo tripled the the revenue attributed to the weekly newsletter immediately, to about \$700k/week.}
+    \resumeItem{Models to determine event and performer popularity in Keras for event recommendations and search.}
+    \resumeItem{Ccustomer entity-linking algorithm to deduplicate devices and users in marketing attribution and funnel KPIs.}
     \resumeItem{Ongoing involvement in the design and measurement of recommendation, search, and CRM marketing systems.}
   \resumeItemListEnd{}
   
   \resumeQuadHeadingChild{Software Engineer, Discovery}{Sept 2016-2017}
   \resumeItemListStart{}
-  \resumeItem{I built features for search, marketing, and frontpage recommendations using Elasticsearch, Postgres, Redis, RabbitMQ, and Python.}
+  \resumeItem{I built features for search, marketing, and frontpage recommendations in Python (Tornado), Elasticsearch, Postgres, Redis, and RabbitMQ.}
   \resumeItemListEnd{}
 
   
   \resumeQuadHeadingChild{Greater Harlem Coalition, Volunteer}{2022-}
   \resumeItemListStart{}
-  \resumeItem{Contributed writing and data analysis to advocate for an equitable distribution of social services. Code \href{https://github.com/skritch/ghc-analysis}{\uline{here}}.}
+  \resumeItem{Contributed writing and data analysis to advocate for a just distribution of social services. Code \href{https://github.com/skritch/ghc-analysis}{\uline{here}}.}
   \resumeItemListEnd{}
 \resumeHeadingListEnd{}
 %---------------------------------------------

@@ -188,7 +188,7 @@
 
 \section{About Me}
 \small{
-  I'm a data generalist and backend engineer, with 5 years of experience working across a modern cloud-based data stack, and a strong math background. I'm looking for a role where I can have impact with my current skillset, while gaining experience with full-stack data-intensive products, MLops, or statistical inference and forecasting.
+  I'm a backend engineer and "data generalist", with 5 years' experience working across a modern cloud-based data stack in Python, Scala, and SQL, and a strong math background. I'm returning to work after a personal sabbatical, looking for a role at an energetic small-/medium-sized company where I can quickly be productive and strategically impactful, and in opportunities to develop skills in adjacent technical areas such as ML or full-stack engineering.
 }
 %--------------------------------------------
 
@@ -200,7 +200,7 @@
   \resumeHeadingListStart{}
     \resumeSectionType{Languages}{:}{Python, Scala, SQL, some Javascript / Typescript}
     \resumeSectionType{Technologies}{:}{PostgreSQL, Redshift, Elasticsearch, Redis, PostGIS, Spark, Flink, RabbitMQ, Akka, DBT, Docker, Nomad, Datadog, Grafana, AWS, EMR, Lambda, Kinesis, S3, Neptune, Jupyter, Luigi, Dagster}
-    \resumeSectionType{Roles}{:}{Data Science, Data Engineering, Data Platform, Backend, Analytics, ML Engineering}
+    \resumeSectionType{Roles}{:}{Data Engineering, Data Science, Data Platform, Backend Engineering, Analytics, ML Engineering}
   \resumeHeadingListEnd{}
 %--------------------------------------------
 
@@ -210,41 +210,41 @@
 
 \section{Experience}
 \resumeHeadingListStart{}
-  \resumeQuadHeading{Seatgeek}{New York, NY}
-  {Sr. Software Engineer, Data Platform, Tech Lead}{2020-2021}
+  \resumeQuadHeading{Seatgeek}{2016-2021}
+  {Sr. Software Engineer, Data Platform Tech Lead}{1.5 Years}
 
   Tech lead of team of six engineers. Projects included:
   \resumeItemListStart{}
-    \resumeItem{Rewrite of our in-house event ingestion service in Flink + Kafka to add features, modernize, and scale to bursts of high traffic. I advocated for the project, designed the system, and implemented much of the business logic.}
+    \resumeItem{Rewrite of our in-house event ingestion service in Flink + Kafka, adding features and scaleability to handle bursty traffic. I advocated for the project, designed the system, and implemented much of the business logic. Functionality included:}
     \resumeItemListStart{}
       \resumeItem{Fanouts to front page recommendations, push notifications, and Redshift, with plans to support an online feature store.}
       \resumeItem{Realtime sessionization, with handling of late-arriving data.}
       \resumeItem{Validation against a repository of JSONSchemas, with alerting in Datadog}
     \resumeItemListEnd{}
-    \resumeItem{Deployed Amundsen, an OSS data-discovery platform, with a custom AWS Neptune backend.}
-    \resumeItem{Jupyter infrastructure based on Docker, Papermill, and NBViewer.}
-
+    \resumeItem{Rollout of a standardized Jupyter setup based on Docker, Papermill, and NBViewer.}
+    \resumeItem{Deployment of Amundsen, an OSS data-discovery platform, with a custom AWS Neptune backend.}
+    \resumeItem{Owned and maintained the core data stack of \href{https://github.com/seatgeek/druzhba}{\uline{Druzhba}} (a now-outdated Python ETL tool; I was the primary maintainer and open-sourced the project), DBT, Looker, Luigi, Redshift, and other AWS products.
+            }
   \resumeItemListEnd{}
-  We also owned the core data stack: \href{https://github.com/seatgeek/druzhba}{\uline{Druzhba}} (built-in-house ETL), DBT, Looker, Luigi, Redshift, and other AWS products.
 
-  \resumeQuadHeadingChild{Sr. Data Scientist}{2019-2020}
-  \resumeQuadHeadingChild{Data Scientist II}{2018}
+  \resumeQuadHeadingChild{Sr. Data Scientist, Data Scientist II}{2.5 Years}
+  \resumeQuadHeadingChild{Data Scientist II}{}
 
-  I specialized in user recommendation signals and our event catalog, working in Spark, SQL, and Python. Projects included:
+  Specialized in user recommendation signals and our event catalog, working in Spark, SQL, and Python. Projects included:
   \resumeItemListStart{}
-  \resumeItem{Algorithms for the weekly newsletter, cart abandonment and price drops notifications, in Spark + SQL. This tripled the direct revenue of the weekly newsletter immediately.}
+  \resumeItem{Algorithms for the weekly newsletter, cart abandonment and price drops notifications, in Spark + SQL. (This work tripled the revenue associated with the weekly newsletter.)}
   \resumeItem{Event and performer popularity models for event recommendations and search, built with Keras}
   \resumeItem{Entity-linking algorithm deduplicating users and device for marketing attribution and funnel KPIs.}
-  \resumeItem{Ongoing involvement in the design and measurement of recommendation, search, and CRM marketing.}
+  \resumeItem{Ongoing involvement in design and measurement of metrics for recommendations, search, and CRM marketing.}
   \resumeItemListEnd{}
   
-  \resumeQuadHeadingChild{Software Engineer, Discovery}{Sept 2016-2017}
+  \resumeQuadHeadingChild{Software Engineer, Discovery}{1 Year}
 
-  I built features for search, CRM marketing, and frontpage recommendations.
+  Contributed features for search, CRM marketing, and frontpage recommendations.
 
-  \resumeSingleHeading{Other}
-  \resumeQuadHeadingChild{Greater Harlem Coalition (Volunteer)}{2022-}
-  Contributed data analysis, writing, editing, and website administration for a community advocacy group. My data pipeline uses DBT, Dagster, and PostGIS (code \href{https://github.com/skritch/ghc-analysis}{\uline{here}}.)
+  \resumeSingleHeading{Other Experience}
+  \resumeQuadHeadingChild{Greater Harlem Coalition (occasional volunteer)}{2022}
+  Contributed data analysis, writing, editing, and website administration for a community advocacy group. My data pipeline uses DBT, Python, Dagster, and PostGIS (code \href{https://github.com/skritch/ghc-analysis}{\uline{here}}.)
   \resumeQuadHeadingChild{Physics Teaching Assistant}{2014-2016}
 \resumeHeadingListEnd{}
 %---------------------------------------------

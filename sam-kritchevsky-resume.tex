@@ -10,7 +10,7 @@
 
 
 %------------PACKAGES----------------
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,10.5pt]{article}
 
 \usepackage{verbatim} % reimplements the "verbatim" and "verbatim*" environments
 
@@ -173,12 +173,14 @@
 % Make sure all the details are correct, you can add more links in the first row of second column if needed
 
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\Huge Sam Kritchevsky \vspace{2pt}} & % row = 1, col = 1
-  Location: New York, NY \\ % row = 1, col = 2
-  \href{https://github.com/skritch}{\uline{GitHub}} $|$ % row = 2, col = 1
-  \href{https://www.linkedin.com/in/sam-kritchevsky-0b4501122/}{\uline{LinkedIn}} $|$ % row = 2, col = 1
-  \href{mailto:sam.kritch@gmail.com}{\uline{sam.kritch@gmail.com}} $|$ % row = 2, col = 2
-  336-414-8694 \\ % row = 2, col = 2
+  \Huge Sam Kritchevsky \vspace{2pt} & % row = 1, col = 1
+  \\% row = 1, col = 2
+  \href{https://github.com/skritch}{\uline{GitHub}} $|$
+  \href{https://samkrit.ch/}{\uline{Website}} $|$
+  \href{https://www.linkedin.com/in/sam-kritchevsky-0b4501122/}{\uline{LinkedIn}} $|$
+  \href{mailto:sam.kritch@gmail.com}{\uline{sam.kritch@gmail.com}} $|$
+  336-414-8694 $|$
+  North Carolina, NYC, or Remote $|$ Full-time or Contract\\ 
 \end{tabular*}
 %--------------------------------------------
 
@@ -186,14 +188,15 @@
 %-----------SUMMARY--------------------------
 % Keep this short, simple and straight to point
 
-\section{About Me}
-\small{
-  I'm a software engineer with 5 years' experience.. 
-  My professional experience is primarily as what might be called a "data generalist". 
-  I contributed to a modern data stack in many capacities: backend SWE, DE, ML, DS, and analytics. 
-  I primarily use Python, Scala, and SQL, and have a strong math background. 
-  I'm currently returning to work after a personal sabbatical, looking for a position where I can be productive quickly and where my work can have strategic impact.
-  I'm also interested in roles in adjacent or specialized areas like full-stack engineering and ML.
+\section{Professional Summary}
+\small{\setlength{\parindent}{1em}\indent
+  I am a software engineer and data scientist. I have 5 years of professional experience working at SeatGeek. where I served in various roles across the data organization and was the tech lead for a six-member Data Platform team for the last year of my tenure. 
+  I am most at home in the domain of data engineering, but I also have plenty experience with ML-eng, Data Science, Analytics, backend, and full-stack engineering; I like to describe as a "data generalist".
+  I've primarily worked in Python and SQL, but also have some experience with Scala and Typescript. 
+  
+  Before my tech career I was enrolled in a Ph.D. program in physics, and I still maintain a hobbyist interest in physics, math and math education, and occasionally still write essays on these topics, which can be seen on my personal site.
+
+  Please note that I am currently re-entering the tech industry after a few years away. In the meantime I have been working on personal projects, writing on my \href{http://sketchingtowards.substack.com/}{\uline{Substack}}, traveling, taking piano lessons, and working as a private math and physics tutor.
 }
 %--------------------------------------------
 
@@ -203,9 +206,10 @@
 
 \section{Technical Skills}
   \resumeHeadingListStart{}
-    \resumeSectionType{Languages}{:}{Python, Scala, SQL, Typescript}
-    \resumeSectionType{Technologies}{:}{PostgreSQL, Redshift, Elasticsearch, Redis, PostGIS, Spark, Flink, RabbitMQ, DBT, Docker, Luigi, Dagster, React, various AWS (EMR, Lambda, Kinesis, S3, Neptune).}
-    \resumeSectionType{Roles}{:}{Data Engineering, Data Science, Data Platform, Backend Engineering, Analytics, ML Engineering}
+    \resumeSectionType{Languages}{:}{Python, SQL. Some Typescript, Javascript, Scala.}
+    \resumeSectionType{Tech}{:}{PostgreSQL, DBT, Spark, Flink, RabbitMQ, Elasticsearch, Redis, PostGIS, Pandas, Numpy, Tensorflow, Docker, Luigi, Dagster, Akka, React, Svelte, Docker, Nomad}
+    \resumeSectionType{Cloud Tech}{:}{Various AWS, incl. Redshift, Redshift Spectrum, Kinesis, Kinesis Firehose, S3, Lambda, EMR, Glue, IAM, RDS.}
+    \resumeSectionType{Roles}{:}{Data Engineering, Data Platform, Backend Engineering, ML Engineering, Data Science, Analytics}
   \resumeHeadingListEnd{}
 %--------------------------------------------
 
@@ -215,41 +219,40 @@
 
 \section{Experience}
 \resumeHeadingListStart{}
-  \resumeQuadHeading{Seatgeek}{2016-2021}
-  {Sr. Software Engineer, Data Platform Tech Lead}{1.5 Years}
-
-  Tech lead of team of six engineers. Projects included:
+  \resumeQuadHeading{SeatGeek}{2016-2021}
+  {Sr. Software Engineer, Data Platform}{2020-21}
+  Tech lead of the Data Platform team. Our projects included:
   \resumeItemListStart{}
-    \resumeItem{Rewrite of our in-house event ingestion service in Flink + Kafka, adding features and massivley improving scaleability. I advocated for the project, designed the system, and implemented most of the business logic. Functionality included:}
-    \resumeItemListStart{}
-      \resumeItem{Fanouts to front page recommendations, push notifications, Redshift, and a planned online feature store.}
-      \resumeItem{Realtime sessionization, supporting late-arriving data.}
-      \resumeItem{Validation against a repository of JSONSchemas with realtime alerting}
-    \resumeItemListEnd{}
-    \resumeItem{Rollout of a standardized Jupyter setup based on Docker, Papermill, and NBViewer.}
-    \resumeItem{Deployment of Amundsen, an OSS data-discovery platform, with a custom AWS Neptune backend.}
-    \resumeItem{Owned and maintained the core data stack of \href{https://github.com/seatgeek/druzhba}{\uline{Druzhba}}, DBT, Looker, Luigi, Redshift, and other AWS products.}
+    \resumeItem{A rewrite of our clickstream ingestion service, massively improving scalability and fault tolerance, particularly during spiky event on-sales, and enabling fanout to many downstream applications. Tech: Flink, Spark}
+    \resumeItem{Established a standardized notebook stack for use by our data science teams, which allowed DS analysis work to be shared reproducibly across the team and to be incorporated into production data pipelines. Tech: Jupyter, Papermill}
+    \resumeItem{Rolled out a centralized system data documentation, lineage, and discovery. Tech: \href{https://github.com/amundsen-io/amundsen}{\uline{Amundsen}}, Airflow, AWS Neptune.}
+    \resumeItem{Owned and maintained the streaming data pipelines for ticket inventory, search, clickstream, and experimentation data. Tech: Spark, Akka Streaming, Python, AWS Kinesis.}
+    \resumeItem{Owned and maintained the core analytics stack, which backed our BI layer and served data needs for many departments. Tech: \href{https://github.com/seatgeek/druzhba}{\uline{Druzhba}}, DBT, Luigi, Redshift, Looker.}
   \resumeItemListEnd{}
 
-  \resumeQuadHeadingChild{Sr. Data Scientist, Data Scientist II}{2.5 Years}
-  \resumeQuadHeadingChild{Data Scientist II}{}
-
-  Specialized in user recommendation signals and our event catalog, working in Spark, SQL, and Python. Projects included:
-  \resumeItemListStart{}
-  \resumeItem{Algorithms for the weekly newsletter, cart abandonment and price drops notifications, in Spark + SQL. (This work tripled the revenue associated with the weekly newsletter.)}
-  \resumeItem{Event and performer popularity models for event recommendations and search, built with Keras}
-  \resumeItem{Entity-linking algorithm deduplicating users and device for marketing attribution and funnel KPIs.}
-  \resumeItem{Ongoing involvement in design and measurement of metrics for recommendations, search, and CRM marketing.}
-  \resumeItemListEnd{}
+  \resumeQuadHeadingChild{Senior Data Scientist}{2019-20}
+  \resumeQuadHeadingChild{Data Scientist}{2017-19}
   
-  \resumeQuadHeadingChild{Software Engineer, Discovery}{1 Year}
+  I specialized on user preference signals, our live event catalog, and push marketing. Projects included:
+  \resumeItemListStart{}
+  \resumeItem{Recommendation algorithms for weekly newsletter and various cart abandonment and price-drop notifications, tripling the revenue attributed to email notifications. Tech: Spark on AWS EMR, SQL.}
+  \resumeItem{Event and performer popularity models, feeding into event recommendations and searcc. Tech: Tensorflow, Keras, Numpy.}
+  \resumeItem{Rewrite of entity-linking algorithm, which deduplicated users and device for marketing attribution and use in funnel KPIs. Tech: SQL, Luigi.}
+  \resumeItem{Ongoing involvement in the design and measurement of metrics for recommendations, search, and push marketing.}
+  \resumeItemListEnd{}
 
-  Contributed features for search, CRM marketing, and frontpage recommendations.
+  \resumeQuadHeadingChild{Software Engineer, Discovery}{2016-17}
+  \resumeItemListStart{}
+  \resumeItem{Backend engineering and data analysis for frontpage recommendations, search, social features, and push marketing.}
+  \resumeItem{I built a simple reverse-ETL system to push datasets from our Data Warehouse into production PostgreSQL and MySQL databases.}
+  \resumeItemListEnd{}
 
-  \resumeSingleHeading{Other Experience}
-  \resumeQuadHeadingChild{Greater Harlem Coalition (volunteer)}{2022}
-  Contributed data analysis, writing, editing, and website administration for a community advocacy group. My data pipeline uses DBT, Python, Dagster, and PostGIS (code \href{https://github.com/skritch/ghc-analysis}{\uline{here}}.)
-  \resumeQuadHeadingChild{Physics Recitation Teacher}{2014-2016}
+  \resumeSingleHeading{Other}
+  \resumeQuadHeadingChild{Private Math Tutor, Club Z Tutoring}{2024-2025}
+  \resumeQuadHeadingChild{Volunteer Data Analyst, Greater Harlem Coalition}{2022}
+  Contributed data analysis, writing, editing, and website administration for a community advocacy group, using a data pipeline built with DBT, Python, Dagster, and PostGIS (code \href{https://github.com/skritch/ghc-analysis}{\uline{here}}.)
+  \resumeQuadHeadingChild{Physics Graduate Student and Teaching Assistant}{2014-2016}
+  My research interests involved theoretical statistical mechanics, complexity theory, and dynamical systems.
 \resumeHeadingListEnd{}
 %---------------------------------------------
 
@@ -261,9 +264,9 @@
 \section{Education}
   \resumeHeadingListStart{}
     \resumeQuadHeading{University of Wisconsin}{Madison, WI}
-    {Coursework towards Physics Ph.D.}{2013-2015}
+    {Physics Ph.D. Student}{2013-2015}
     \resumeQuadHeading{University of North Carolina}{Chapel Hill, NC}
-    {B.S. Physics}{2012}
+    {B.S. Physics, Math Minor}{2012}
   \resumeHeadingListEnd{}
 %---------------------------------------------
 
